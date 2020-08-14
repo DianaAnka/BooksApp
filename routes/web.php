@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-
+    
 Route::get('/','BooksController@index')->name('books.index');
 Route::get('/books/{book}','BooksController@show')->name('books.show');
-
+Route::post('/rate','BooksController@rate');
 Route::post('/import','CsvController@csv_import');
 Route::get('/imp','CsvController@imp');
