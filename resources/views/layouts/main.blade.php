@@ -35,9 +35,22 @@
               <input type="text" class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-1 focus:outline-none
               focus:shadow-outline" placeholder="Search">
                 <div class="md:ml-4 mt-3 md:mt-0">
-                    <a href="/logout">
-                        <img src="/img/avatar.png" alt="avatar" class="rounded-full w-8 h-8">
-                    </a>
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
                 </div>
             </div>
         </div>
