@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Books App</title>
+    <title >Books App</title>
 
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -18,14 +18,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('books.index') }}" class="hover:text-gray-300" style="font-family: 'Arial Rounded MT Bold'">Books App</a>
+                    <a href="{{ route('books.index') }}" class="text-gray-500 uppercase tracking-wider text-lg font-semibold hover:text-gray-300">Books App</a>
                 </li>
                 @unless (Auth::check())            
                 <li>
-                    <a href="{{ route('login') }}" class="hover:text-gray-300 ml-8" style="font-family: 'Arial Rounded MT Bold'">Login</a>
+                    <a href="{{ route('login') }}" class=" text-gray-500  tracking-wider text-lg font-semibold hover:text-gray-300 ml-8" style="font-family: 'Arial Rounded MT Bold'">Login</a>
                 </li>
                 <li>
-                    <a href="{{ route('register') }}" class="hover:text-gray-300 ml-8" style="font-family: 'Arial Rounded MT Bold'">Register</a>
+                    <a href="{{ route('register') }}" class="hover:text-gray-300 ml-8 text-gray-500  tracking-wider text-lg font-semibold" style="font-family: 'Arial Rounded MT Bold'">Register</a>
                 </li>
 
                 @endunless
@@ -37,10 +37,10 @@
                 <div class="md:ml-4 mt-3 md:mt-0">
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="{{route('books.profile')}}" class="dropdown-item text-gray-500  tracking-wider text-lg font-semibold">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item text-gray-500  tracking-wider text-lg font-semibold" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}

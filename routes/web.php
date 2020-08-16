@@ -21,3 +21,4 @@ Route::get('/books/{book}','BooksController@show')->name('books.show');
 Route::post('/rate','BooksController@rate');
 Route::post('/import','CsvController@csv_import');
 Route::get('/imp','CsvController@imp');
+Route::get('/profile','BooksController@profile')->name('books.profile');

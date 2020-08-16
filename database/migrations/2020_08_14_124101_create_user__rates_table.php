@@ -14,7 +14,7 @@ class CreateUserRatesTable extends Migration
     public function up()
     {
         Schema::create('user__rates', function (Blueprint $table) {
-            $table->id();
+            
             $table->unsignedBigInteger('user_id')->unsigned();
 
             $table->unsignedBigInteger('book_id')->unsigned();
